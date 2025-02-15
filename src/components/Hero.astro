@@ -1,0 +1,46 @@
+---
+import ParticlesBackground from "../components/ParticlesBackground.jsx";
+import BtnRedes from "./BtnRedes.astro";
+import DecryptedText from "./DecryptedText";
+---
+
+<section class="relative min-h-screen w-full max-w-[1440px] mx-auto px-[2rem] lg:px-[11rem] flex flex-col justify-center   bg-black overflow-hidden">
+  <ParticlesBackground client:load />
+
+  <div class="relative z-10 text-white text-[1.5rem] font-bold py-10 text-left fonte-terciaria">
+    <h1 class="flex items-center ">
+      <span class="roxo text-[2rem] lg:text-[3.5rem]">{'{'}</span> 
+      <DecryptedText text="HELLO, WORLD !" className="inline-block" animateOn="view" revealDirection="start" delay={0} maxIterations={10} client:load />
+      <span class="roxo text-[2rem] lg:text-[3.5rem]">{'}'}</span>
+    </h1>
+
+    <p>
+      <DecryptedText text="Meu nome é" className="inline-block" animateOn="view" revealDirection="start" delay={200} maxIterations={15} client:load />
+    </p>
+
+    <p>
+      <DecryptedText text="Victor Feitosa" className="text-[2.12rem] lg:text-[4rem] roxo font-extrabold inline-block" animateOn="view" revealDirection="start" delay={400} maxIterations={20} client:load />
+    </p>
+
+    <p>
+      <DecryptedText text="e construo páginas web " className="inline-block" animateOn="view" revealDirection="start" delay={600} maxIterations={25} client:load /><span class="roxo">;</span>
+    </p>
+  </div>
+
+  <div class="relative z-10 flex gap-[1rem] mt-6  lg:scale-100 w-full">
+    <BtnRedes href="https://github.com/victor-feitosaa" icon="github.png" alt="github link" />
+    <BtnRedes href="https://www.linkedin.com/in/victorfeitosalima/" icon="linkedin.png" alt="linkedin link" />
+
+    <a
+    href="\curriculo-Victor-Emanuel-Feitosa-Lima.pdf"
+    download="cv_victor_feitosa.pdf"
+    rel="noopener noreferrer"
+    class="inline-flex items-center justify-center gap-[1rem] w-[100px] lg:w-[240px] h-[80px] bg-preto-secundario rounded-[15px] border-2 border-[#4B4B4B] hover:scale-105 cursor-pointer"
+  >
+    <img src="/assets/cv.png" alt="cv" class="w-[40px] h-[40px]" />
+    <h3 class="hidden lg:block font-bold text-white fonte-principal">DOWNLOAD CV</h3>
+  </a>
+  
+  </div>
+</section>
+

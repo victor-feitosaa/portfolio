@@ -1,0 +1,14 @@
+---
+// src/components/SocialLink.astro
+const { href, icon, alt } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-flex items-center justify-center w-[100px] lg:w-[83px] h-[80px] bg-preto-secundario rounded-[15px] border-2 border-[#4B4B4B] hover:scale-105 "
+>
+  <img src={`/assets/${icon}`} alt={alt} class="w-1/2 " />
+  
+</a>
