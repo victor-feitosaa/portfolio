@@ -4,26 +4,26 @@ import BtnRedes from "./BtnRedes.astro";
 import DecryptedText from "./DecryptedText";
 ---
 
-<section id="home" class="relative min-h-screen w-full max-w-[1440px] mx-auto px-[2rem] lg:px-[11rem] flex flex-col justify-center   bg-black overflow-hidden">
+<section id="home" class="relative min-h-screen w-full max-w-[1440px] mx-auto px-[1.5rem] lg:px-[11rem] flex flex-col justify-center   bg-black overflow-hidden">
   <ParticlesBackground client:load />
 
   <div class="relative z-10 text-white text-[1.5rem] lg:text-[2.5rem] font-bold py-10 text-left fonte-terciaria">
     <h1 class="flex items-center ">
       <span class="roxo text-[2rem] lg:text-[3.5rem]">{'{'}</span> 
-      <DecryptedText text="HELLO, WORLD !" className="inline-block" animateOn="view" revealDirection="start" delay={0} maxIterations={10} client:load />
+      <DecryptedText text="HELLO, WORLD !" className="inline-block break-normal" animateOn="view" revealDirection="start" delay={0} maxIterations={10} client:load />
       <span class="roxo text-[2rem] lg:text-[3.5rem]">{'}'}</span>
     </h1>
 
     <p>
-      <DecryptedText text="Meu nome é" className="inline-block" animateOn="view" revealDirection="start" delay={200} maxIterations={15} client:load />
+      <DecryptedText text="Meu nome é" className="inline-block break-keep" animateOn="view" revealDirection="start" delay={200} maxIterations={15} client:load />
     </p>
 
     <p>
-      <DecryptedText text="Victor Feitosa" className="text-[2.12rem] lg:text-[4rem] roxo font-extrabold inline-block" animateOn="view" revealDirection="start" delay={400} maxIterations={20} client:load />
+      <DecryptedText text="Victor Feitosa" className="text-[2.12rem] lg:text-[4rem] roxo font-extrabold inline-block break-normal" animateOn="view" revealDirection="start" delay={400} maxIterations={20} client:load />
     </p>
 
     <p>
-      <DecryptedText text="e construo páginas web " className="inline-block" animateOn="view" revealDirection="start" delay={600} maxIterations={25} client:load /><span class="roxo">;</span>
+      <DecryptedText text="e construo páginas web " className="inline-block break-keep" animateOn="view" revealDirection="start" delay={600} maxIterations={25} client:load /><span class="roxo">;</span>
     </p>
   </div>
 
