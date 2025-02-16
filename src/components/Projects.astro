@@ -1,5 +1,7 @@
 ---
 import BtnRedes from "./BtnRedes.astro";
+import FadeIn from "../components/FadeIn.jsx";
+import StarBorder from "../components/StarBorder"
 
 const project = {
   title: "Interface de Matrícula",
@@ -9,125 +11,145 @@ const project = {
   github: "#",
   live: "#",
 };
+
+
+
+
 ---
+
 
 <section id="projetos"
   class="w-full min-h-screen bg-preto-principal relative fonte-principal flex flex-col justify-center"
 >
+
   <div class="w-full max-w-[1440px] mx-auto px-[2rem] lg:px-[11rem] ">
-    <div class="flex flex-col justify-center items-center w-full">
-      <div class="text-xl cinza flex flex-col  items-start w-full py-20">
-        <p>Esses são meus</p>
-        <h2 class="text-[4rem] roxo font-extrabold fonte-terciaria">
-          Projetos
-        </h2>
-      </div>
+    <div class="flex flex-col justify-center  w-full">
+      
+      <FadeIn client:load>
 
-      <div class="flex flex-col lg:flex-row gap-15 lg:gap-0 justify-between  w-full">
-        <div
-          class="card bg-preto-secundario text-white rounded-2xl shadow-lg w-full lg:w-[40%] min-h-[450px] border border-[#4b4b4b] flex flex-col justify-between fonte-principal hover:scale-105 transition"
-        >
+        <div class="text-xl cinza flex flex-col  items-start w-full py-20">
+          <p>Esses são meus</p>
+          <h2 class="text-[4rem] roxo font-extrabold fonte-terciaria">
+            Projetos
+          </h2>
+        </div>
+      </FadeIn>
+  
+      <FadeIn client:load>
+
+        <div class="flex flex-col lg:flex-row gap-15 lg:gap-0 justify-between  w-full">
           <div
-            class="relative bg-roxo w-full flex justify-center items-center p-3 rounded-tr-lg rounded-tl-lg h-48"
+            class="card bg-preto-secundario text-white rounded-2xl shadow-lg w-full lg:w-[40%] min-h-[450px] border border-[#4b4b4b] flex flex-col justify-between fonte-principal hover:scale-105 transition"
           >
-            <img
-              src="/assets/interface.png"
-              alt="Interface de Matrícula"
-              class="h-[98%] w-[98%] object-cover rounded-lg hover:scale-105 transition"
-            />
+            <div
+              class="relative bg-roxo w-full flex justify-center items-center p-3 rounded-tr-lg rounded-tl-lg h-48"
+            >
+              <img
+                src="/assets/interface.png"
+                alt="Interface de Matrícula"
+                class="h-[98%] w-[98%] object-cover rounded-lg hover:scale-105 transition"
+              />
+            </div>
+            <div class="flex gap-4 mt-4 p-5">
+              <img
+                src="/assets/javaScript.png"
+                alt="javascript"
+                class="h-7 w-8"
+              />
+              <img src="/assets/tailwindcss.png" alt="tailwind" class="h-7 w-8" />
+              <img src="/assets/api.png" alt="api" class="h-7 w-8" />
+            </div>
+            <div class="p-5 flex-1">
+              <h3 class="text-xl font-bold">{project.title}</h3>
+              <p class="cinza mt-1">{project.description}</p>
+            </div>
+            <hr class="mx-5 border-1 border-[#4b4b4b]" />
+            <div class="w-full flex gap-4 my-4 justify-start p-5">
+              <BtnRedes
+                href="https://github.com/victor-feitosaa/interface-de-matricula"
+                icon="github.png"
+                alt="github link"
+              />
+              <BtnRedes
+                href="https://interface-de-matricula.vercel.app/localidadesMult.html"
+                icon="external-link.png"
+                alt="vercel link"
+              />
+            </div>
           </div>
-          <div class="flex gap-4 mt-4 p-5">
-            <img
-              src="/assets/javaScript.png"
-              alt="javascript"
-              class="h-7 w-8"
-            />
-            <img src="/assets/tailwindcss.png" alt="tailwind" class="h-7 w-8" />
-            <img src="/assets/api.png" alt="api" class="h-7 w-8" />
-          </div>
-          <div class="p-5 flex-1">
-            <h3 class="text-xl font-bold">{project.title}</h3>
-            <p class="cinza mt-1">{project.description}</p>
-          </div>
-          <hr class="mx-5 border-1 border-[#4b4b4b]" />
-          <div class="w-full flex gap-4 my-4 justify-start p-5">
-            <BtnRedes
-              href="https://github.com/victor-feitosaa/interface-de-matricula"
-              icon="github.png"
-              alt="github link"
-            />
-            <BtnRedes
-              href="https://interface-de-matricula.vercel.app/localidadesMult.html"
-              icon="external-link.png"
-              alt="vercel link"
-            />
+    
+          <!-- Segundo Card -->
+          <div
+            class="card bg-preto-secundario text-white rounded-2xl shadow-lg w-full lg:w-[40%] min-h-[450px] border border-[#4b4b4b] flex flex-col justify-between fonte-principal hover:scale-105 transition"
+          >
+            <!-- Imagem do Projeto -->
+            <div
+              class="relative bg-roxo w-full flex justify-center items-center p-3 rounded-tr-lg rounded-tl-lg h-48"
+            >
+              <img
+                src="/assets/kambordados.png"
+                alt="Kambordados"
+                class="h-[98%] w-[98%] object-cover rounded-lg hover:scale-105 transition"
+              />
+            </div>
+    
+            <!-- Tecnologias -->
+            <div class="flex gap-4 mt-4 p-5">
+              <img
+                src="/assets/javaScript.png"
+                alt="javascript"
+                class="h-7 w-8"
+              />
+              <img src="/assets/tailwindcss.png" alt="tailwind" class="h-7 w-8" />
+              <img src="/assets/react.png" alt="react" class="h-7 w-8" />
+              <img src="/assets/figma.png" alt="figma" class="h-7 w-8" />
+            </div>
+    
+            <!-- Título e Descrição -->
+            <div class="p-5 flex-1">
+              <h3 class="text-xl font-bold">Kambordados</h3>
+              <p class="cinza mt-1">
+                Landing page personalizada para artista Kambordados expor seus
+                trabalhos e entrarem em contato com a mesma
+              </p>
+            </div>
+    
+            <hr class="mx-5 border-1 border-[#4b4b4b]" />
+    
+            <!-- Botões -->
+            <div class="w-full flex gap-4 my-4 justify-start p-5">
+              <BtnRedes
+                href="https://github.com/victor-feitosaa/kambordados"
+                icon="github.png"
+                alt="github link"
+              />
+              <BtnRedes
+                href="https://kambordados.vercel.app"
+                icon="external-link.png"
+                alt="vercel link"
+              />
+            </div>
           </div>
         </div>
+      </FadeIn>
+    </div>
+  
+    <FadeIn client:load>
 
-        <!-- Segundo Card -->
-        <div
-          class="card bg-preto-secundario text-white rounded-2xl shadow-lg w-full lg:w-[40%] min-h-[450px] border border-[#4b4b4b] flex flex-col justify-between fonte-principal hover:scale-105 transition"
+      <div class="w-full flex justify-center pt-30 pb-20">
+
+        <a
+          href="https://github.com/victor-feitosaa"
+          target="_blank"
+          class="flex gap-2 bg-preto-secundario border-1 border-[#4b4b4b] py-3  w-full lg:w-[60%] px-12 lg:px-20 rounded-3xl justify-center items-center text-white  text-[15px] lg:text-[1rem] font-semibold hover:scale-105 transition"
         >
-          <!-- Imagem do Projeto -->
-          <div
-            class="relative bg-roxo w-full flex justify-center items-center p-3 rounded-tr-lg rounded-tl-lg h-48"
-          >
-            <img
-              src="/assets/kambordados.png"
-              alt="Kambordados"
-              class="h-[98%] w-[98%] object-cover rounded-lg hover:scale-105 transition"
-            />
-          </div>
-
-          <!-- Tecnologias -->
-          <div class="flex gap-4 mt-4 p-5">
-            <img
-              src="/assets/javaScript.png"
-              alt="javascript"
-              class="h-7 w-8"
-            />
-            <img src="/assets/tailwindcss.png" alt="tailwind" class="h-7 w-8" />
-            <img src="/assets/react.png" alt="react" class="h-7 w-8" />
-            <img src="/assets/figma.png" alt="figma" class="h-7 w-8" />
-          </div>
-
-          <!-- Título e Descrição -->
-          <div class="p-5 flex-1">
-            <h3 class="text-xl font-bold">Kambordados</h3>
-            <p class="cinza mt-1">
-              Landing page personalizada para artista Kambordados expor seus
-              trabalhos e entrarem em contato com a mesma
-            </p>
-          </div>
-
-          <hr class="mx-5 border-1 border-[#4b4b4b]" />
-
-          <!-- Botões -->
-          <div class="w-full flex gap-4 my-4 justify-start p-5">
-            <BtnRedes
-              href="https://github.com/victor-feitosaa/kambordados"
-              icon="github.png"
-              alt="github link"
-            />
-            <BtnRedes
-              href="https://kambordados.vercel.app"
-              icon="external-link.png"
-              alt="vercel link"
-            />
-          </div>
-        </div>
+          <h4 class="">Veja todos meus projetos no GitHub</h4>
+          <img src="/assets/github.png" class="scale-50 " />
+        </a>
       </div>
-    </div>
-
-    <div class="w-full flex justify-center pt-30 pb-20">
-      <a
-        href="https://github.com/victor-feitosaa"
-        target="_blank"
-        class="flex gap-2 bg-preto-secundario border-1 border-[#4b4b4b] py-3  w-full lg:w-[60%] px-12 lg:px-20 rounded-3xl justify-center items-center text-white  text-[15px] lg:text-[1rem] font-semibold hover:scale-105 transition"
-      >
-        <h4 class="">Veja todos meus projetos no GitHub</h4>
-        <img src="/assets/github.png" class="scale-50 " />
-      </a>
-    </div>
+    </FadeIn>
   </div>
+
+
+
 </section>
