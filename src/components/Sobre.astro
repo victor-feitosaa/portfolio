@@ -1,0 +1,43 @@
+---
+import FadeIn from "./FadeIn";
+import MagnetLines from "./MagnetLines";
+---
+<section id="sobre" class="relative min-h-screen bg-preto-secundario fonte-principal flex justify-center items-center w-full px-[2rem] lg:px-[12rem]">
+  <div class="w-full max-w-[1440px] mx-auto flex flex-col gap-14 md:flex-row">
+    
+    <!-- MagnetLines com tamanho fixo a partir de lg -->
+    <div class=" lg:w-1/2 flex justify-center items-center overflow-hidden">
+      <FadeIn client:load>
+        <div class="hidden lg:block w-[60vmin] h-[60vmin] lg:w-[500px] lg:h-[500px] flex justify-center items-center">
+          <MagnetLines
+            client:load
+            rows={9}
+            columns={9}
+            containerSize="100%"
+            lineColor="#6D05FF"
+            lineWidth="0.8vmin"
+            lineHeight="5vmin"
+            baseAngle={0}
+          />
+        </div>
+      </FadeIn>
+    </div>
+
+    <div class="w-full lg:w-1/2 text-left flex flex-col justify-center items-center">
+      <FadeIn client:load>
+        <div class="text-xl cinza flex flex-col items-start w-full py-8">
+          <p>Saiba um pouco</p>
+          <h2 class="text-[4rem] roxo font-extrabold fonte-terciaria">
+            Sobre Mim
+          </h2>
+        </div>
+      
+        <div class="text-white text-lg mb-[1rem]">
+          <p>Sou um desenvolvedor front-end apaixonado por transformar ideias em interfaces intuitivas e visualmente impactantes. Com foco em performance, acessibilidade e design responsivo, utilizo tecnologias como HTML, CSS, JavaScript, React e Tailwind para criar experiências digitais modernas e eficientes.</p>
+          <p>Meu objetivo é aliar código e criatividade para desenvolver soluções que sejam funcionais e esteticamente agradáveis. Sempre buscando aprender e evoluir, estou pronto para novos desafios e oportunidades!
+          <br />Vamos criar algo incrível juntos?</p>
+        </div>
+      </FadeIn>
+    </div>
+  </div>
+</section>
